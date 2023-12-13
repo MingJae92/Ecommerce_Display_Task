@@ -56,6 +56,17 @@ const fetchStoreItems = async () => {
       card.appendChild(el);
     }
   };
+
+    // Add an 'h3' element with the product title
+  addElement("h3", title);
+  // Add a 'div' element with the first variant's price and the class 'price'
+  addElement("div", variants?.[0]?.price, "price");
+  // Add a 'div' element with tags (if available) and the class 'tags'
+  addElement("div", tags ? `Tags: ${tags.join(", ")}` : undefined, "tags");
+
+  // Return the created card element
+  return card;
+
     
 
 
