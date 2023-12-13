@@ -2,7 +2,7 @@ const apiUrl = "https://uwp-test-store.myshopify.com/products.json";
 
 // Function to fetch data from the API
 
-const fetchData = async () => {
+const fetchStoreItems= async () => {
   try {
     // Fetch data from the API
     const response = await fetch(apiUrl);
@@ -75,12 +75,12 @@ const createProductCard = ({ title, images, variants, tags }) => {
 };
 
 // Function to render product cards on the page
-const renderProductCards = async () => {
+const renderStoreItemsCards = async () => {
   try {
     // Get the product container element from the DOM
     const productContainer = document.getElementById("productContainer");
     // Fetch products using the fetchData function
-    const products = await fetchData();
+    const products = await fetchStoreItems();
 
     // Check if products exist
     if (products) {
@@ -100,4 +100,4 @@ const renderProductCards = async () => {
 };
 
 // Event listener for DOMContentLoaded event, which triggers rendering of product cards
-document.addEventListener("DOMContentLoaded", renderProductCards);
+document.addEventListener("DOMContentLoaded", renderStoreItemsCards);

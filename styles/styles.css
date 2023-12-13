@@ -36,3 +36,17 @@ body {
     margin-top: 10px;
     color: #888;
 }
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+}
