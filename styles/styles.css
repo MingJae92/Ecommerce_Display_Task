@@ -37,6 +37,38 @@ body {
     color: #888;
 }
 
+.card {
+    /* Add styles for your card */
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px;
+    position: relative;
+  }
+  
+  .gender-text {
+    /* Add styles for the "GENDER" text */
+    background-color: #DAA520;
+    padding: 8px;
+    position: relative;
+  }
+  
+  .shop-now-text {
+    /* Add styles for the "SHOP NOW" text */
+    background-color: #DAA520;
+    color: #FFF;
+    padding: 8px;
+  }
+  
+  .shop-now-container {
+    /* Add styles for the "shop-now-container" div */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #DAA520;
+    padding: 8px;
+  }
+  
+
 /* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
     .card {
