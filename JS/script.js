@@ -63,8 +63,9 @@ const createProductCard = ({ title, images, variants, tags }) => {
           shopNowText.classList.add("shop-now-text");
           shopNowText.textContent = "SHOP NOW";
           shopNowText.style.backgroundColor = "#DAA520";
-          shopNowText.style.color = "#FFF";
+          shopNowText.style.color = "#000"; // Black color
           shopNowText.style.padding = "10px";
+          shopNowText.style.fontWeight = "bold"; // Bold text
 
           shopNowContainer.appendChild(shopNowText);
           blockElement.appendChild(shopNowContainer);

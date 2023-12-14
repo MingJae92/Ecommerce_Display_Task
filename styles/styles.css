@@ -46,6 +46,7 @@ body {
     position: absolute;
     top: 5px;
     left: 0;
+   
   }
   
   .shop-now-text {
@@ -53,6 +54,7 @@ body {
     color: #FFF;
     padding: 10px;
     margin: 15px 10px 10px 10px; /* Increase top margin to 15px */
+    
   }
   
   .shop-now-container {
