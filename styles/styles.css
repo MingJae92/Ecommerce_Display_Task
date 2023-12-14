@@ -37,7 +37,8 @@ body {
   .tags {
     display: block;
     margin-top: 10px;
-    color: #888;
+    color: #000;
+    
   }
   
   .gender-text {
