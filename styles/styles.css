@@ -3,64 +3,57 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
-}
-
-.card {
-    border: 1px solid #DAA520; /* Yellow mustard color */
+  }
+  
+  .card {
+    border: 1px solid #DAA520;
     border-radius: 8px;
     margin: 10px;
     padding: 15px;
     width: 250px;
     background-color: #fff;
-}
-
-.card img {
+    position: relative; /* Added position:relative */
+  }
+  
+  .card img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
-}
-
-.price {
+  }
+  
+  .price {
     margin-top: 10px;
     font-weight: bold;
-}
-
-.tags {
+  }
+  
+  .tags {
     margin-top: 10px;
     color: #888;
-}
-
-.card {
-    /* Add styles for your card */
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 15px;
-    position: relative;
   }
   
   .gender-text {
-    /* Add styles for the "GENDER" text */
     background-color: #DAA520;
     padding: 8px;
-    position: relative;
+    position: absolute;
+    top: 5px; /* Adjust the top position as needed */
+    left: 0;
   }
   
   .shop-now-text {
-    /* Add styles for the "SHOP NOW" text */
     background-color: #DAA520;
     color: #FFF;
     padding: 8px;
+    margin: 10px;
   }
   
   .shop-now-container {
-    /* Add styles for the "shop-now-container" div */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -68,17 +61,17 @@ body {
     padding: 8px;
   }
   
-
-/* Media Queries for responsiveness */
-@media screen and (max-width: 768px) {
+  /* Media Queries for responsiveness */
+  @media screen and (max-width: 768px) {
     .card {
-        width: 100%;
-        box-sizing: border-box;
+      width: 100%;
+      box-sizing: border-box;
     }
-}
-
-@media screen and (max-width: 480px) {
+  }
+  
+  @media screen and (max-width: 480px) {
     .container {
-        padding: 10px;
+      padding: 10px;
     }
-}
+  }
+  
