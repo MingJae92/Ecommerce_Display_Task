@@ -19,7 +19,7 @@ body {
     padding: 15px;
     width: 250px;
     background-color: #fff;
-    position: relative; /* Added position:relative */
+    position: relative;
   }
   
   .card img {
@@ -29,11 +29,13 @@ body {
   }
   
   .price {
-    margin-top: 10px;
+    display: block;
     font-weight: bold;
+    margin-top: 10px;
   }
   
   .tags {
+    display: block;
     margin-top: 10px;
     color: #888;
   }
@@ -42,23 +44,24 @@ body {
     background-color: #DAA520;
     padding: 8px;
     position: absolute;
-    top: 5px; /* Adjust the top position as needed */
+    top: 5px;
     left: 0;
   }
   
   .shop-now-text {
     background-color: #DAA520;
     color: #FFF;
-    padding: 8px;
-    margin: 10px;
+    padding: 10px;
+    margin: 15px 10px 10px 10px; /* Increase top margin to 15px */
   }
   
   .shop-now-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #DAA520;
-    padding: 8px;
+    position: relative;
+  }
+  
+  .block-element {
+    display: block;
+    margin-bottom: 10px;
   }
   
   /* Media Queries for responsiveness */

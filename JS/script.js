@@ -39,12 +39,23 @@ const createProductCard = ({ title, images, variants, tags }) => {
 
   const addElement = (element, textContent, className) => {
     if (textContent !== undefined) {
+      const blockElement = document.createElement("div");
+      blockElement.classList.add("block-element");
+
       const el = document.createElement(element);
-      el.textContent = textContent;
+
+      if (className === "price") {
+        // Add dollar sign directly to the left side of the price
+        el.textContent = `$${textContent}`;
+      } else {
+        el.textContent = textContent;
+      }
+
       if (className) {
         el.classList.add(className);
+        blockElement.appendChild(el);
+
         if (className === "tags") {
-          // Create shop-now-container within the tags container
           const shopNowContainer = document.createElement("div");
           shopNowContainer.classList.add("shop-now-container");
 
@@ -53,13 +64,14 @@ const createProductCard = ({ title, images, variants, tags }) => {
           shopNowText.textContent = "SHOP NOW";
           shopNowText.style.backgroundColor = "#DAA520";
           shopNowText.style.color = "#FFF";
-          shopNowText.style.padding = "8px";
+          shopNowText.style.padding = "10px";
 
           shopNowContainer.appendChild(shopNowText);
-          card.appendChild(shopNowContainer);
+          blockElement.appendChild(shopNowContainer);
         }
       }
-      card.appendChild(el);
+
+      card.appendChild(blockElement);
     }
   };
 
@@ -79,8 +91,6 @@ const renderStoreItemsCards = async () => {
     if (products) {
       products.forEach((product) => {
         const card = createProductCard(product);
-
-        // Append the card to the product container
         productContainer.appendChild(card);
       });
     }
